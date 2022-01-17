@@ -3,14 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { WishListComponent } from './components/wish-list/wish-list.component';
+import { BookListComponent } from './components/book-list/book-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { BookTitleComponent } from './components/book-title/book-title.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    WishListComponent,
+    BookListComponent,
+    BookTitleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+.btn-default{
+    background-color: rgb(235, 68, 124);
+}
+
+.navbar{
+    background-color: rgb(235, 68, 124);
+}
+
+.card{
+    padding: 20px;
+    display: block;
+    position: relative;
+
+}
+
+.table-responsive.cart-product{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 16px;
+    border-radius: 4px;
+}

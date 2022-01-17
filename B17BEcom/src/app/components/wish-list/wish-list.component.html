@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="navbar navbar-dark bg-default shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <strong>My WishList</strong>
+            
+            <div style="text-align-last: 20px;">  
+                <button (click)="emptywishlist()" style="font-size: 20px; margin-left: 870px; border-radius: 4px;" >clear wishlist</button> 
+            </div></div>
+            
+
+        </div>
+    </div>
+            <ng-container class="card" *ngIf="wishListArray.length !=0">
+
+                <div class="container">
+                    <div class="card-table">
+                        <div class="cart-product">
+                            <br>
+                            
+                            <table class="table table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>MRP</th>
+                                        <th>Add to cart</th>
+                                        <th>Delete</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of wishListArray; let i = index">
+                                        
+                                        <td><img style="width: 120px;" src="https://bookcart.azurewebsites.net/Upload/{{item.coverFileName}}" alt=""></td>
+                                        <td><a routerlink="wishlist/:id">{{item.title}}</a></td>
+                                        
+                                        <th style="width: 12%;">₹{{item.price}}.00</th>
+                                        
+                                        <td>
+                                            <button class="btn btn-primary"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                                            <td>
+                                            <button (click)="removeItem(item.bookId)" class="btn btn-default"><i class="fas fa-trash-alt"></i>Remove from Wishlist</button>
+                                        </td>
+                                       
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="wishListArray.length ==0">
+                <div class="container">
+                    <div class="card">Your Wishlist is empty
+                    <td><button routerLink="/allbooks" class="btn btn-primary">continue shopping</button></td>
+                    </div></div>
+             </ng-container>
+            
+
+
+            
