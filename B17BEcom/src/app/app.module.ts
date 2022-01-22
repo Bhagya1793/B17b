@@ -8,7 +8,6 @@ import { WishListComponent } from './components/wish-list/wish-list.component';
 import { BookListComponent } from './components/book-list/book-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { BookTitleComponent } from './components/book-title/book-title.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -18,7 +17,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     WishListComponent,
     BookListComponent,
-    BookTitleComponent
   ],
   imports: [
     BrowserModule,

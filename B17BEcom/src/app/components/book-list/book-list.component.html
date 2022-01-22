@@ -21,7 +21,7 @@
         </div>
               </h5>
               <p>
-                <strong>₹{{ item.price }}</strong>
+                <strong>{{ item.price | currency:'INR' }}</strong>
                 
               </p>
               <button class="btn btn-primary">Add to Cart</button>
